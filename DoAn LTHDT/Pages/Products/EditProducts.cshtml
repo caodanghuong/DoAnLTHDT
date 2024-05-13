@@ -1,0 +1,30 @@
+﻿@page
+@model DoAn_LTHDT.Pages.Products.EditProductsModel
+@{
+   
+}
+<p>Products Information Edit</p>
+<form method="Post">
+	<label>Product ID</label><br />
+	<input type="number" name="IdProductEdit" value="@Model.ProductModel.GETIDPRODUCT()" readonly /><br />
+
+	<label>Enter Name Product Edit</label><br />
+	<input type="text" name="nameProductEdit" value="@Model.ProductModel.GETNAMEPRODUCT()" required /><br />
+
+	<label>Enter Date Expired of Product Edit</label><br />
+	<label>Enter format YYYY/MM/DD</label><br />
+	<input type="datetime" name="dateExpiredEdit" value="@Model.ProductModel.GETDATEEXPIRE()" required /><br />
+
+	<label>Enter Name Company of Product Edit</label><br />
+	<input type="text" name="nameCompanyEdit" value="@Model.ProductModel.GETCOMPANYNAME()" required /><br />
+
+	<label>Enter Year of Product Edit</label><br />
+	<label>Enter format YYYY</label><br />
+	<input type="number" name="yearOffProductEdit" value="@Model.ProductModel.GETYEAROFPRODUCT()" required /><br />
+
+	<label>Enter Name Category of Product Edit</label><br />
+	<input type="text" name="categoryEdit" value="@Model.ProductModel.GETCATEGORY()" required /><br />
+
+	<input type="submit" value="Edit" /><br />
+</form>
+<p>@Model.result</p>

@@ -1,0 +1,34 @@
+﻿@page
+@model DoAn_LTHDT.Pages.Inventorys.InventoryPageModel
+@{
+}
+<h1>Inventory Product</h1>
+<style>
+    table, td, th {
+        border: 1px solid;
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+</style>
+<table>
+    <tr>
+        <th>Product ID</th>
+        <th> Expired Date</th>
+        <th>Check Date</th>
+        <th>Remaining Product</th>
+
+    </tr>
+    @for (int i = 0; i < Model.inventoryList.Count; i++)
+    {
+                <tr>
+            <td>@Model.inventoryList[i].GETPRODUCTID()</td>
+            <td>@Model.inventoryList[i].GETEXPIREDATE()</td>
+            <td>@Model.inventoryList[i].GETCHECKDATE()</td>
+            <td>@Model.inventoryList[i].GETRESTPRODUCT()</td>
+
+                </tr>
+    }
+</table>

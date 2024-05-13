@@ -1,0 +1,16 @@
+﻿@page
+@model DoAn_LTHDT.Pages.Categories.EditCategorysModel
+@{
+}
+
+<p>Category Information Edit</p>
+<form method="Post">
+	<label>Category ID</label><br />
+	<input type="number" name="IdCategoryEdit" value="@Model.CategoryModel.GETCATEGORYID()" readonly /><br />
+
+	<label>Enter Name Category Edit</label><br />
+	<input type="text" name="nameCategorytEdit" value="@Model.CategoryModel.GETNAMECATEGORY()" required /><br />
+
+	<input type="submit" value="Edit" /><br />
+</form>
+<p>@Model.result</p>

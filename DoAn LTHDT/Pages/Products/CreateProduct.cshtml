@@ -1,0 +1,28 @@
+﻿@page
+@model DoAn_LTHDT.Pages.Products.CreateProductModel
+@{
+}
+
+<p>Please Enter Products Information</p>
+<form method="Post">
+	<label>Enter Name Product</label><br />
+	<input type="text" name="nameProduct" required/><br />
+
+	
+	<label>Enter Date Expired of Product</label><br />
+	<label>Enter format YYYY/MM/DD</label><br />
+	<input type="datetime" name="dateExpired" required /><br />
+
+	<label>Enter Name Company of Product</label><br />
+	<input type="text" name="nameCompany" required /><br />
+
+	<label>Enter Year of Product</label><br />
+	<label>Enter format YYYY</label><br />
+	<input type="number" name="yearoffProduct" value="" /><br />
+
+	<label>Enter Name Category of Product</label><br />
+	<input type="text" name="category" value="" /><br />
+
+	<input type="submit" value="Okey" /><br />
+</form>
+<p>@Model.result</p>

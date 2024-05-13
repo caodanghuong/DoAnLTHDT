@@ -1,0 +1,15 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <RootNamespace>DoAn_LTHDT</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\LTHDT_2024_Entities\LTHDT_2024_Entities.csproj" />
+    <ProjectReference Include="..\LTHDT_2024_Service\LTHDT_2024_Service.csproj" />
+  </ItemGroup>
+
+</Project>

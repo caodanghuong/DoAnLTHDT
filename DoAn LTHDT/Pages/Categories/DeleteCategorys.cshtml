@@ -1,0 +1,15 @@
+﻿@page
+@model DoAn_LTHDT.Pages.Categories.DeleteCategorysModel
+@{
+}
+<p>Category Information Delete</p>
+<form method="Post">
+	<label>Category ID</label><br />
+	<input type="number" name="IdCategoryDelete" value="@Model.CategoryModel.GETCATEGORYID()" readonly /><br />
+
+	<label>Enter Name Category Delete</label><br />
+	<input type="text" name="nameCategorytDelete" value="@Model.CategoryModel.GETNAMECATEGORY()" readonly /><br />
+
+	<input type="submit" value="Delete" /><br />
+</form>
+<p>@Model.result</p>

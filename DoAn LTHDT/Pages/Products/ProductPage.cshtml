@@ -1,0 +1,41 @@
+﻿@page
+@model DoAn_LTHDT.Pages.Products.ProductPageModel
+@{
+}
+<style>
+    table, td, th {
+        border: 1px solid;
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+</style>
+<h1> Product Page</h1>
+<table>
+    <tr>
+        <th>Product ID</th>
+        <th>Product Name</th>
+        <th>Expired Date</th>
+        <th>Company</th>
+        <th>Product Date</th>
+        <th>Category Name</th>
+        <th>Edit</th>
+        <th>Delete</th>
+
+    </tr>
+    @for (int i = 0; i < Model.productList.Count; i++)
+    {
+        <tr>
+            <td>@Model.productList[i].GETIDPRODUCT()</td>
+            <td>@Model.productList[i].GETNAMEPRODUCT()</td>
+            <td>@Model.productList[i].GETDATEEXPIRE().ToShortDateString()</td>
+            <td>@Model.productList[i].GETCOMPANYNAME()</td>
+            <td>@Model.productList[i].GETYEAROFPRODUCT()</td>
+            <td>@Model.productList[i].GETCATEGORY()</td>
+            <td><a href="EditProducts?id=@Model.productList[i].GETIDPRODUCT()">Edit</a></td>
+            <td><a href="DeleteProduct?id=@Model.productList[i].GETIDPRODUCT()">Delete</a></td>
+            </tr>
+    }
+</table>

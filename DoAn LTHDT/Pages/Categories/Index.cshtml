@@ -1,0 +1,33 @@
+﻿@page
+@model DoAn_LTHDT.Pages.Categories.IndexModel
+@{
+}
+
+<style>
+    table, td, th {
+        border: 1px solid;
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+</style>
+<h1>Category List</h1>
+<table>
+    <tr>
+        <th>Category ID</th>
+        <th>Category Name</th>
+        <th>Edit</th>
+        <th>Delete</th>
+    </tr>
+    @for(int i =0; i <Model.categories.Count; i++)
+    {
+    <tr>
+            <td>@Model.categories[i].GETCATEGORYID()</td>
+            <td>@Model.categories[i].GETNAMECATEGORY()</td>
+            <td><a href="Categories/EditCategorys?id=@Model.categories[i].GETCATEGORYID()">Edit </a></td>
+            <td><a href="Categories/DeleteCategorys?id=@Model.categories[i].GETCATEGORYID()">Delete </a></td>
+        </tr>
+    }
+</table>

@@ -1,0 +1,36 @@
+﻿@page
+@model DoAn_LTHDT.Pages.Imports.ImportPageModel
+@{
+}
+<h1>Import List</h1>
+<style>
+    table, td, th {
+        border: 1px solid;
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+</style>
+<table>
+    <tr>
+        <th>Imports ID</th>
+        <th>Product ID</th>
+        <th>Quantities</th>
+        <th>Price</th>
+        <th>Date</th>
+        <th>Total</th>
+    </tr>
+    @for (int i = 0; i < Model.importList.Count; i++)
+    {
+            <tr>
+            <td>@Model.importList[i].GETIMPORTID()</td>
+            <td>@Model.importList[i].GETPRODUCTID()</td>
+            <td>@Model.importList[i].GETQUANTITIES()</td>
+            <td>@Model.importList[i].GETPRICE()</td>
+            <td>@Model.importList[i].GETIMPORTDATE().ToShortDateString()</td>
+            <td>@Model.importList[i].GETTOTAL()</td>
+            </tr>
+    }
+</table>

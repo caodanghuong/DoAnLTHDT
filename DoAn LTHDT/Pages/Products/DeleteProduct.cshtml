@@ -1,0 +1,29 @@
+﻿@page
+@model DoAn_LTHDT.Pages.Products.DeleteProductsModel
+@{
+}
+<p>Products Information Edit</p>
+<form method="Post">
+	<label>Product ID</label><br />
+	<input type="number" name="IdProductDelete" value="@Model.ProductModel.GETIDPRODUCT()" readonly /><br />
+
+	<label>Enter Name Product Edit</label><br />
+	<input type="text" name="nameProductDelete" value="@Model.ProductModel.GETNAMEPRODUCT()" readonly /><br />
+
+	<label>Enter Date Expired of Product Edit</label><br />
+	<label>Enter format YYYY/MM/DD</label><br />
+	<input type="datetime" name="dateExpiredDelete" value="@Model.ProductModel.GETDATEEXPIRE()" readonly /><br />
+
+	<label>Enter Name Company of Product Edit</label><br />
+	<input type="text" name="nameCompanyDelete" value="@Model.ProductModel.GETCOMPANYNAME()" readonly /><br />
+
+	<label>Enter Year of Product Edit</label><br />
+	<label>Enter format YYYY</label><br />
+	<input type="number" name="yearOffProductDelete" value="@Model.ProductModel.GETYEAROFPRODUCT()" readonly /><br />
+
+	<label>Enter Name Category of Product Edit</label><br />
+	<input type="text" name="categoryDele" value="@Model.ProductModel.GETCATEGORY()" readonly /><br />
+
+	<input type="submit" value="Delete" /><br />
+</form>
+<p>@Model.result</p>
