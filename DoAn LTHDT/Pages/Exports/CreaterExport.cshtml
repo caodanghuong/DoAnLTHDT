@@ -1,0 +1,27 @@
+﻿@page
+@model DoAn_LTHDT.Pages.Exports.CreateExportModel
+@{
+}
+<p>Please Enter Export Product Information</p>
+<form method="Post">
+	<label>Enter Product ID</label><br />
+	<input type="number" name="productIDEdit" required/><br />
+
+	<label>Enter Quantities</label><br />
+	<input type="number" name="quantitiesEdit" required /><br />
+
+	<label>Enter Prices</label><br />
+	<input type="number" name="priceEdit" required /><br />
+
+
+	<label>Enter Date Export </label><br />
+	<label>Enter format YYYY/MM/DD</label><br />
+	<input type="datetime" name="dateCheck" required /><br />
+
+
+	<label>Enter Total</label><br />
+	<input type="number" name="totalproduct" required /><br />
+
+	<input type="submit" value="Edit" /><br />
+</form>
+<p>@Model.result</p>

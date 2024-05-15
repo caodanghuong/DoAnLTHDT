@@ -13,6 +13,7 @@
         border-collapse: collapse;
     }
 </style>
+
 <table>
     <tr>
         <th>Exports ID</th>
@@ -21,6 +22,8 @@
         <th>Price</th>
         <th>Date</th>
         <th>Total</th>
+        <th>Edit</th>
+        <th>Delete</th>
     </tr>
     @for (int i = 0; i < Model.ExportList.Count; i++)
     {
@@ -31,6 +34,8 @@
             <td>@Model.ExportList[i].GETPRICE()</td>
             <td>@Model.ExportList[i].GETEXPORTDATE().ToShortDateString()</td>
             <td>@Model.ExportList[i].GETTOTAL()</td>
+            <td><a href="EditExports?id=@Model.ExportList[i].GETEXPORTID()">Edit </a></td>
+            <td><a href="DeleteExport?id=@Model.ExportList[i].GETEXPORTID()">Delete </a></td>
         </tr>
     }
 </table>

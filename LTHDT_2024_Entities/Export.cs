@@ -8,26 +8,26 @@ namespace LTHDT_2024_Entities
 {
     public class Export
     {
-        private String exportId;
-        private String productId;
+        private int exportId;
+        private int productId;
         private int quantities;
         private int price;
         private DateTime exportDate;
         private int total;
 
-        public String GETEXPORTID()
+        public int GETEXPORTID()
         {
             return exportId;
         }
-        public void SETEXPORTID(String exportId)
+        public void SETEXPORTID(int exportId)
         {
             this.exportId = exportId;
         }
-        public String GETPRODUCTID()
+        public int GETPRODUCTID()
         {
             return productId;
         }
-        public void SETPRODUCTID(String productId)
+        public void SETPRODUCTID(int productId)
         {
             this.productId = productId;
         }

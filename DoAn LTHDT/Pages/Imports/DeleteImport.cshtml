@@ -1,0 +1,28 @@
+﻿@page
+@model DoAn_LTHDT.Pages.Imports.DeleteImportModel
+@{
+}
+<p>Import Information Delete</p>
+<form method="Post">
+	<label>Import ID Delete</label><br />
+	<input type="number" name="IdImportDelete" value="@Model.ImportModel.GETIMPORTID()" readonly /><br />
+
+	<label>Enter ID Product Delete</label><br />
+	<input type="number" name="IDProductDelete" value="@Model.ImportModel.GETPRODUCTID()" readonly /><br />
+
+	<label>Enter Quantities of Import Delete</label><br />
+	<input type="number" name="quantitesDelete" value="@Model.ImportModel.GETQUANTITIES()" readonly /><br />
+
+	<label>Enter Price of Import Delete</label><br />
+	<input type="number" name="priceDelete" value="@Model.ImportModel.GETPRICE()" readonly /><br />
+
+	<label>Enter Date Check of Import Delete</label><br />
+	<label>Enter format YYYY/MM/DD</label><br />
+	<input type="datetime" name="dateExpiredDelete" value="@Model.ImportModel.GETIMPORTDATE()" readonly /><br />
+
+	<label>Enter Total of Import Delete</label><br />
+	<input type="number" name="totalDelete" value="@Model.ImportModel.GETTOTAL()" readonly /><br />
+
+	<input type="submit" value="Delete" /><br />
+</form>
+<p>@Model.result</p>

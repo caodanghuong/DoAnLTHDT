@@ -9,6 +9,10 @@ namespace LTHDT_2024_Service
 {
     public interface IServiceImports
     {
-        public List<Import> XulyGetImports();
+		public string DeleteImports(int idImportDelete);
+		public Import GetIdImport(int id);
+		public string UpdateImport(int idImportEdit, int iDProductEdit, int quantitesEdit, int priceEdit, DateTime dateExpiredEdit, int totalEdit);
+		public string validateImport(int createrImport, int quantitiesImport, int priceImport, DateTime dateCheckImport, int totalImport);
+		public List<Import> XulyGetImports();
     }
 }

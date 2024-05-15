@@ -13,14 +13,24 @@ namespace LTHDT_2024_Repo
 
 		public void CreateProducts(string nameProduct, DateTime dateExpired, string nameCompany, int yearoffProduct, int category)
 		{
+			var productMax = GetStoreProduct()[0].GETIDPRODUCT();
+			for(int i = 1; i < GetStoreProduct().Count; i++)
+			{
+				if(productMax < GetStoreProduct()[i].GETIDPRODUCT()){
+					productMax = GetStoreProduct()[i].GETIDPRODUCT();
+				}
+			}
+			productMax++;
+
 			var productList = GetStoreProduct();
 			Product productNew = new Product();
-			productNew.SETNAMEPRODUCT(nameProduct);
-			productNew.SETDATEEXPIRE(dateExpired);
-			productNew.SETCOMPANYMANE(nameCompany);
-			productNew.SETYEAROFPRODUCT(yearoffProduct);
-			productNew.SETCATEGORY(category);
-			productList.Add(productNew);
+            productNew.SETIDPRODUCT(productMax);
+            productNew.SETNAMEPRODUCT(nameProduct);
+            productNew.SETDATEEXPIRE(dateExpired);
+            productNew.SETCOMPANYMANE(nameCompany);
+            productNew.SETYEAROFPRODUCT(yearoffProduct);
+            productNew.SETCATEGORY(category);
+            productList.Add(productNew);
 			AddProductListDB(productList);
 		}
 
@@ -96,5 +106,7 @@ namespace LTHDT_2024_Repo
 			productList.Remove(productDelete);
 			AddProductListDB(productList);
 		}
+
+		
 	}
 }

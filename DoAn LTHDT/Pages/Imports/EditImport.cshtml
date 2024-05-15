@@ -1,0 +1,29 @@
+﻿@page
+@model DoAn_LTHDT.Pages.Imports.EditImportModel
+@{
+}
+<p>Import Information Edit</p>
+<form method="Post">
+	<label>Import ID Edit</label><br />
+	<input type="number" name="IdImportEdit" value="@Model.ImportModel.GETIMPORTID()" readonly /><br />
+
+	<label>Enter ID Product Edit</label><br />
+	<input type="number" name="IDProductEdit" value="@Model.ImportModel.GETPRODUCTID()" required /><br />
+
+	<label>Enter Quantities of Import Edit</label><br />
+	<input type="number" name="quantitesEdit" value="@Model.ImportModel.GETQUANTITIES()" required /><br />
+
+	<label>Enter Price of Import Edit</label><br />
+	<input type="number" name="priceEdit" value="@Model.ImportModel.GETPRICE()" required /><br />
+
+	<label>Enter Date Check of Import Edit</label><br />
+	<label>Enter format YYYY/MM/DD</label><br />
+	<input type="datetime" name="dateExpiredEdit" value="@Model.ImportModel.GETIMPORTDATE()" required /><br />
+
+
+	<label>Enter Total of Import Edit</label><br />
+	<input type="number" name="totalEdit" value="@Model.ImportModel.GETTOTAL()" required /><br />
+
+	<input type="submit" value="Edit" /><br />
+</form>
+<p>@Model.result</p>
